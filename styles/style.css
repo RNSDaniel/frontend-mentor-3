@@ -1,0 +1,128 @@
+@layer base {
+  :root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --DarkGrey: hsl(0, 0%, 12%);
+    --OffBlack: hsl(0, 0%, 8%);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "inter", sans-serif;
+    background-color: var(--OffBlack);
+  }
+
+  .main {
+    display: grid;
+    justify-content: center;
+  }
+
+  .container {
+    margin-top: 175px;
+    background-color: var(--DarkGrey);
+    width: 384px;
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .container img {
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 27px;
+  }
+
+  .container h1 {
+    color: var(--White);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0px;
+  }
+
+  .local {
+    color: var(--Green);
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+  }
+
+  .conteudo {
+    color: var(--White);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .links a {
+    text-decoration: none;
+    width: 304px;
+    height: 45px;
+    background-color: var(--Grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--White);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  footer {
+    background-color: var(--DarkGrey);
+    color: var(--White);
+    position: relative;
+    margin-top: 40px;
+    padding-top: 10px;
+    bottom: 0rem;
+    width: 100%;
+    overflow-x: visible;
+    height: 2.5rem;
+    text-align: center;
+  }
+
+  footer a {
+    color: var(--White);
+    &:hover {
+      color: var(--Green);
+    }
+  }
+}
+
+@layer mobile {
+  @media (max-width: 375px) {
+    .container {
+      margin-top: 115px;
+      /* background-color: var(--DarkGrey); */
+      width: 327px;
+      height: 580px;
+      /* display: flex;
+      /* flex-direction: column; */
+      /* align-items: center;  */
+      padding: 30px;
+      border-radius: 10px;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .links a {
+      width: 279px;
+    }
+  }
+}
